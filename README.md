@@ -29,7 +29,7 @@ In order to run the project in the console, enter node index.js
 node index.js
 ```
 
-To send a message (locally), you need to make a POST request to `127.0.0.1:3000`. In body, pass json from [example](../blob/main/payloadExample.json). It is also necessary to add `Headers` to the request:
+To send a message (locally), you need to make a POST request to `127.0.0.1:3000`. In body, pass json from [example](../main/payloadExample.json). It is also necessary to add `Headers` to the request:
 
 ```shell
 apikey: [YOUR BOT API KEY]
