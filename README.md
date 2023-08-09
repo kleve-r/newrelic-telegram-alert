@@ -1,7 +1,7 @@
 
 # This is a simple API Gateway that allows you to configure a Telegram webhook destination in a New Relic Workflow to send alerts to a Telegram channel or group.
 
-I took the basis for this project here - [jdezego/new-relic-telegram-alerts](https://github.com/jdezego/new-relic-telegram-alerts) *separate paragraph*.
+I took the basis for this project here - [jdezego/new-relic-telegram-alerts](https://github.com/jdezego/new-relic-telegram-alerts).
 
 ***
 
