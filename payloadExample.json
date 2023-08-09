@@ -1,6 +1,5 @@
-//this is what a typical new relic alert payload looks like.
-//note the last 2 fields.
-//you update this payload in the NR workflow interface.
+// this is what a typical new relic alert payload looks like.
+// you update this payload in the NR workflow interface.
 
 {
 	"id": {{ json issueId }},
@@ -18,6 +17,4 @@
 	"alertPolicyNames": {{ json accumulations.policyName }},
 	"alertConditionNames": {{ json accumulations.conditionName }},
 	"workflowName": {{ json workflowName }},
-    "telegramBotAPIKey":"<YOUR BOT API KEY>]",
-    "telegramChatID":"<YOUR CHAT ID>"
 }
