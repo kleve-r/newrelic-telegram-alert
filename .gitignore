@@ -1,0 +1,54 @@
+/node_modules
+/public/hot
+/public/storage
+/app/Console/Commands/TestCommand.php
+/storage/*.key
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/maxmind
+/google
+
+# docker files
+/docker-compose.yml
+/mysql
+/redis
+
+# phpstorm project files
+.idea
+
+# netbeans project files
+nbproject
+
+# vscode project files
+.vscode
+
+# zend studio for eclipse project files
+.buildpath
+.project
+.settings
+
+# windows thumbnail cache
+Thumbs.db
+
+# composer vendor dir
+/vendor
+
+# composer itself is not needed
+composer.phar
+
+# Mac DS_Store Files
+.DS_Store
+
+# phpunit itself is not needed
+phpunit.phar
+# local phpunit config
+/phpunit.xml
+
+# vagrant runtime
+/.vagrant
+
