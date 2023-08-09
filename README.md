@@ -23,7 +23,7 @@ https://api.telegram.org/bot[BOT_API_KEY]/sendMessage?chat_id=[CHAT_ID]&text=[ME
 ---
 
 
-In order to run the project in the console, enter node index.js
+In order to run the project in the console, enter:
 
 ```shell
 node index.js
