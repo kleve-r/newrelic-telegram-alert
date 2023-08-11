@@ -44,7 +44,7 @@ app.post("/", (req, res) => {
 
 
     // title of the message
-    let telegramMessage = emoji +` <b><u>${req.body.title}</u></b> (${req.body.state.toLowerCase()})` + "\n\n";
+    let telegramMessage = emoji +` <b><u>${req.body.title.replace(/</g,'&#60;').replace(/>/g,'&#62;')}</u></b> (${req.body.state.toLowerCase()})` + "\n\n";
     let messageInfo = [];
 
     // keys that will be excluded from the body of the message
@@ -54,6 +54,9 @@ app.post("/", (req, res) => {
         keyName = keyName.charAt(0).toUpperCase() + keyName.slice(1);
 
         if(!skippedValues.includes(key)){
+            if(typeof value === 'string'){
+                value = value.replace(/</g,'&#60;').replace(/>/g,'&#62;');
+            }
             messageInfo.push(`<b>${keyName}</b>: ${value}`);
         }
     })
