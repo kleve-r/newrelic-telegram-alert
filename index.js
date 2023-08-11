@@ -36,19 +36,27 @@ app.post("/", (req, res) => {
         return;
     }
 
-    // state message emoji
+    // state message emoji default - 'CRITICAL'
     let emoji = '🔴';
     if(req.body.state.toUpperCase() === 'CLOSED'){
         emoji = '🟢';
+    }else {
+        if(req.body.priority.toUpperCase() === 'HIGH'){
+            emoji = '🟠';
+        } else if (req.body.priority.toUpperCase() === 'MEDIUM'){
+            emoji = '🔵';
+        }
     }
 
 
     // title of the message
-    let telegramMessage = emoji +` <b><u>${req.body.title.replace(/</g,'&#60;').replace(/>/g,'&#62;')}</u></b> (${req.body.state.toLowerCase()})` + "\n\n";
+    let telegramMessage = emoji +
+        ` <b><u>${req.body.title.replace(/</g,'&#60;').replace(/>/g,'&#62;')}</u></b> (${req.body.state.toLowerCase()})` + "\n" +
+        ` Priority (${req.body.priority})` + "\n\n";
     let messageInfo = [];
 
     // keys that will be excluded from the body of the message
-    let skippedValues = ['title', 'state', 'createdAt', 'updatedAt'];
+    let skippedValues = ['title', 'state', 'createdAt', 'updatedAt', 'priority'];
     Object.entries(req.body).forEach(([key, value]) => {
         let keyName = key.replace(/([A-Z])/g, " $1");
         keyName = keyName.charAt(0).toUpperCase() + keyName.slice(1);
