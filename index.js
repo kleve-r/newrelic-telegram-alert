@@ -74,8 +74,8 @@ app.post("/", (req, res) => {
 
     // added datetime info
     telegramMessage += "\n\n-----------------------------------------------------\n" +
-        `<b>Created At</b>: ${new Date(req.body.createdAt * 1000).toLocaleString()} ` + "\n" +
-        `<b>Updated At</b>: ${new Date(req.body.updatedAt * 1000).toLocaleString()} `;
+        `<b>Created At</b>: ${new Date(req.body.createdAt).toLocaleString()} ` + "\n" +
+        `<b>Updated At</b>: ${new Date(req.body.updatedAt).toLocaleString()} `;
 
     // end request 200
     res.end();
